@@ -3,206 +3,218 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="河南昀昶建设科技有限公司 - 专业光伏新能源解决方案提供商">
-    <meta name="keywords" content="光伏,新能源,太阳能,河南昀昶,建设科技,充电站,储能">
-    <title>河南昀昶建设科技有限公司 - 光伏新能源解决方案</title>
+    <title>河南昀昶建设科技有限公司 | 新能源解决方案领导者</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
-        /* 全局样式 */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: "Microsoft YaHei", sans-serif;
-        }
-        
-        :root {
-            --primary-color: #1a936f;
-            --secondary-color: #2a6e8f;
-            --accent-color: #f9a826;
-            --light-color: #f8f9fa;
-            --dark-color: #343a40;
         }
         
         body {
+            font-family: 'Noto Sans SC', 'Roboto', sans-serif;
             line-height: 1.6;
             color: #333;
-            background-color: #fff;
-            overflow-x: hidden;
+            background-color: #f9f9f9;
         }
         
         .container {
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 15px;
+            padding: 0 20px;
         }
         
-        section {
-            padding: 80px 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-            position: relative;
-        }
-        
-        .section-title h2 {
-            font-size: 36px;
-            color: var(--dark-color);
-            margin-bottom: 15px;
-        }
-        
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background-color: var(--primary-color);
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            text-decoration: none;
-        }
-        
-        .btn:hover {
-            background-color: #147a5d;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        
-        /* 导航栏样式 */
+        /* 头部和导航 */
         header {
-            background-color: white;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            transition: all 0.3s;
         }
         
-        .navbar {
+        .header-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 0;
+            padding: 15px 0;
         }
         
         .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #2ecc71, #3498db);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: white;
             font-size: 24px;
             font-weight: bold;
-            color: var(--primary-color);
         }
         
-        .logo span {
-            color: var(--secondary-color);
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+            color: #2c3e50;
         }
         
-        .nav-links {
+        .logo-text span {
+            color: #2ecc71;
+        }
+        
+        nav ul {
             display: flex;
             list-style: none;
         }
         
-        .nav-links li {
+        nav ul li {
             margin-left: 30px;
         }
         
-        .nav-links a {
+        nav ul li a {
             text-decoration: none;
-            color: var(--dark-color);
+            color: #2c3e50;
             font-weight: 500;
+            font-size: 16px;
             transition: color 0.3s;
             position: relative;
         }
         
-        .nav-links a::after {
+        nav ul li a:hover {
+            color: #2ecc71;
+        }
+        
+        nav ul li a::after {
             content: '';
             position: absolute;
-            bottom: -5px;
-            left: 0;
             width: 0;
             height: 2px;
-            background-color: var(--primary-color);
+            background: #2ecc71;
+            left: 0;
+            bottom: -5px;
             transition: width 0.3s;
         }
         
-        .nav-links a:hover::after {
+        nav ul li a:hover::after {
             width: 100%;
         }
         
-        .nav-links a:hover {
-            color: var(--primary-color);
-        }
-        
-        .mobile-menu {
+        .mobile-menu-btn {
             display: none;
+            background: none;
+            border: none;
             font-size: 24px;
+            color: #2c3e50;
             cursor: pointer;
         }
         
-        /* 轮播图样式 */
+        /* 英雄区域 */
         .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
-            display: flex;
-            align-items: center;
             color: white;
             text-align: center;
-            margin-top: 70px;
-        }
-        
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
+            padding: 180px 0 120px;
+            margin-top: 80px;
         }
         
         .hero h1 {
-            font-size: 48px;
+            font-size: 3.5rem;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         }
         
         .hero p {
-            font-size: 20px;
-            margin-bottom: 30px;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
         }
         
-        /* 关于我们样式 */
+        .cta-button {
+            display: inline-block;
+            background-color: #2ecc71;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            border: 2px solid #2ecc71;
+        }
+        
+        .cta-button:hover {
+            background-color: transparent;
+            color: #2ecc71;
+        }
+        
+        /* 关于我们 */
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: #2ecc71;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .about-section {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
         .about-content {
             display: flex;
             align-items: center;
-            gap: 50px;
+            gap: 60px;
         }
         
         .about-text {
             flex: 1;
         }
         
+        .about-text h3 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        
         .about-text p {
-            margin-bottom: 15px;
-            font-size: 16px;
-            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #555;
         }
         
         .about-image {
             flex: 1;
-            border-radius: 8px;
+            border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
@@ -218,564 +230,373 @@
             transform: scale(1.05);
         }
         
-        /* 业务范围样式 */
-        .services {
-            background-color: var(--light-color);
+        /* 服务区域 */
+        .services-section {
+            padding: 100px 0;
+            background-color: #f5f9fc;
         }
         
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
         }
         
         .service-card {
             background-color: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s;
+            border-radius: 10px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
         
         .service-card:hover {
             transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
         
-        .service-img {
-            height: 200px;
-            overflow: hidden;
-        }
-        
-        .service-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s;
-        }
-        
-        .service-card:hover .service-img img {
-            transform: scale(1.1);
-        }
-        
-        .service-content {
-            padding: 25px;
-        }
-        
-        .service-content h3 {
-            font-size: 22px;
-            margin-bottom: 15px;
-            color: var(--dark-color);
-        }
-        
-        /* 项目案例样式 */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-        }
-        
-        .project-card {
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s;
-        }
-        
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .project-img {
-            height: 250px;
-            overflow: hidden;
-        }
-        
-        .project-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s;
-        }
-        
-        .project-card:hover .project-img img {
-            transform: scale(1.1);
-        }
-        
-        .project-content {
-            padding: 20px;
-        }
-        
-        .project-content h3 {
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-        
-        /* 公司优势样式 */
-        .advantages {
-            background-color: var(--light-color);
-        }
-        
-        .advantages-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-        
-        .advantage-item {
-            text-align: center;
-            padding: 30px 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s;
-        }
-        
-        .advantage-item:hover {
-            transform: translateY(-5px);
-        }
-        
-        .advantage-icon {
-            font-size: 40px;
-            color: var(--primary-color);
-            margin-bottom: 20px;
-        }
-        
-        .advantage-item h3 {
-            font-size: 20px;
-            margin-bottom: 15px;
-        }
-        
-        /* 联系我们样式 */
-        .contact-content {
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #3498db, #2ecc71);
+            border-radius: 50%;
             display: flex;
-            gap: 50px;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: white;
+            font-size: 32px;
+        }
+        
+        .service-card h3 {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        /* 联系信息 */
+        .contact-section {
+            padding: 100px 0;
+            background-color: white;
         }
         
         .contact-info {
-            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
         }
         
-        .contact-form {
-            flex: 1;
+        .contact-card {
+            background-color: #f5f9fc;
+            padding: 40px 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s;
         }
         
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 25px;
+        .contact-card:hover {
+            transform: translateY(-5px);
         }
         
         .contact-icon {
-            font-size: 24px;
-            color: var(--primary-color);
-            margin-right: 15px;
-            min-width: 30px;
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-control {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 16px;
-            transition: border 0.3s;
-        }
-        
-        .form-control:focus {
-            border-color: var(--primary-color);
-            outline: none;
-            box-shadow: 0 0 0 2px rgba(26, 147, 111, 0.2);
-        }
-        
-        textarea.form-control {
-            min-height: 150px;
-            resize: vertical;
-        }
-        
-        /* 页脚样式 */
-        footer {
-            background-color: var(--dark-color);
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #3498db, #2ecc71);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
             color: white;
-            padding: 60px 0 20px;
+            font-size: 28px;
+        }
+        
+        .contact-card h3 {
+            font-size: 1.3rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        /* 页脚 */
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 70px 0 30px;
         }
         
         .footer-content {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
         }
         
-        .footer-column {
-            flex: 1;
-            margin-right: 30px;
+        .footer-logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 20px;
         }
         
-        .footer-column:last-child {
-            margin-right: 0;
+        .footer-logo span {
+            color: #2ecc71;
         }
         
-        .footer-column h3 {
-            font-size: 20px;
+        .footer-about p {
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+        
+        .footer-links h4, .footer-contact h4 {
+            font-size: 1.3rem;
             margin-bottom: 25px;
-            position: relative;
-            padding-bottom: 10px;
+            color: white;
         }
         
-        .footer-column h3::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 40px;
-            height: 2px;
-            background-color: var(--primary-color);
-        }
-        
-        .footer-links {
+        .footer-links ul {
             list-style: none;
         }
         
-        .footer-links li {
-            margin-bottom: 10px;
+        .footer-links ul li {
+            margin-bottom: 12px;
         }
         
-        .footer-links a {
-            color: #bbb;
+        .footer-links ul li a {
+            color: #ecf0f1;
             text-decoration: none;
-            transition: color 0.3s;
+            opacity: 0.8;
+            transition: opacity 0.3s;
         }
         
-        .footer-links a:hover {
-            color: white;
+        .footer-links ul li a:hover {
+            opacity: 1;
+        }
+        
+        .footer-contact p {
+            margin-bottom: 15px;
+            opacity: 0.8;
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-contact i {
+            margin-right: 10px;
+            color: #2ecc71;
         }
         
         .copyright {
             text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid #444;
-            color: #bbb;
-            font-size: 14px;
-        }
-        
-        /* 返回顶部按钮 */
-        .back-to-top {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background-color: var(--primary-color);
-            color: white;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s;
-            z-index: 999;
-        }
-        
-        .back-to-top.active {
-            opacity: 1;
-            visibility: visible;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            opacity: 0.7;
         }
         
         /* 响应式设计 */
         @media (max-width: 992px) {
-            .about-content, .contact-content {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .about-content {
                 flex-direction: column;
             }
             
-            .footer-content {
-                flex-wrap: wrap;
-            }
-            
-            .footer-column {
-                flex: 0 0 50%;
-                margin-bottom: 30px;
+            .hero {
+                padding: 150px 0 100px;
             }
         }
         
         @media (max-width: 768px) {
-            .nav-links {
+            nav ul {
                 display: none;
                 position: absolute;
-                top: 70px;
+                top: 100%;
                 left: 0;
                 width: 100%;
                 background-color: white;
                 flex-direction: column;
-                padding: 20px;
-                box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+                padding: 20px 0;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
             }
             
-            .nav-links.active {
+            nav ul.active {
                 display: flex;
             }
             
-            .nav-links li {
-                margin: 10px 0;
+            nav ul li {
+                margin: 0;
+                text-align: center;
+                padding: 15px 0;
             }
             
-            .mobile-menu {
+            .mobile-menu-btn {
                 display: block;
             }
             
             .hero h1 {
-                font-size: 36px;
+                font-size: 2.2rem;
             }
             
             .hero p {
-                font-size: 18px;
+                font-size: 1.1rem;
             }
             
             .section-title h2 {
-                font-size: 30px;
+                font-size: 2rem;
             }
         }
         
         @media (max-width: 576px) {
-            .services-grid, .projects-grid, .advantages-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .footer-column {
-                flex: 0 0 100%;
+            .hero {
+                padding: 130px 0 80px;
             }
             
             .hero h1 {
-                font-size: 28px;
+                font-size: 1.8rem;
+            }
+            
+            .cta-button {
+                padding: 12px 30px;
+                font-size: 1rem;
+            }
+            
+            .about-section, .services-section, .contact-section {
+                padding: 70px 0;
             }
         }
     </style>
 </head>
 <body>
-    <!-- 导航栏 -->
+    <!-- 头部和导航 -->
     <header>
-        <div class="container">
-            <nav class="navbar">
-                <div class="logo">河南昀昶<span>建设科技</span></div>
-                <ul class="nav-links">
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-icon">昀</div>
+                <div class="logo-text">河南<span>昀昶</span>建设科技</div>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul id="navMenu">
                     <li><a href="#home">首页</a></li>
                     <li><a href="#about">关于我们</a></li>
-                    <li><a href="#services">业务范围</a></li>
-                    <li><a href="#projects">项目案例</a></li>
-                    <li><a href="#advantages">公司优势</a></li>
+                    <li><a href="#services">业务领域</a></li>
                     <li><a href="#contact">联系我们</a></li>
                 </ul>
-                <div class="mobile-menu">☰</div>
             </nav>
         </div>
     </header>
 
-    <!-- 轮播图/首页 -->
+    <!-- 英雄区域 -->
     <section class="hero" id="home">
         <div class="container">
-            <div class="hero-content">
-                <h1>河南昀昶建设科技有限公司</h1>
-                <p>专业光伏新能源解决方案提供商，致力于绿色能源发展</p>
-                <a href="#contact" class="btn">联系我们</a>
-            </div>
+            <h1>新能源解决方案领导者</h1>
+            <p>河南昀昶建设科技有限公司，自2007年成立以来，一直致力于新能源光伏、风电、储能及充电站等项目的投资、建设与运维，为客户提供全方位清洁能源解决方案。</p>
+            <a href="#contact" class="cta-button">联系我们</a>
         </div>
     </section>
 
     <!-- 关于我们 -->
-    <section id="about">
+    <section class="about-section" id="about">
         <div class="container">
             <div class="section-title">
                 <h2>关于我们</h2>
-                <p>专业、创新、可靠的绿色能源合作伙伴</p>
             </div>
+            
             <div class="about-content">
                 <div class="about-text">
-                    <p>河南昀昶建设科技有限公司是一家专注于光伏新能源领域的高新技术企业，致力于为客户提供全方位的光伏发电、充电站和储能解决方案。</p>
-                    <p>公司拥有一支经验丰富、技术精湛的专业团队，从项目咨询、方案设计、设备采购到施工安装、运维服务，为客户提供一站式服务。</p>
-                    <p>我们秉承"绿色能源，创造未来"的理念，通过技术创新和优质服务，推动清洁能源的普及应用，为可持续发展贡献力量。</p>
-                    <a href="#contact" class="btn" style="margin-top: 20px;">了解更多</a>
+                    <h3>深耕新能源行业16年</h3>
+                    <p>河南昀昶建设科技有限公司成立于2007年，总部位于河南省郑州市金水区。公司凭借在新能源领域的深厚积累和技术优势，已成为中原地区领先的新能源解决方案提供商。</p>
+                    <p>我们专注于新能源光伏项目投资、建设与运维，风电运维，储能系统集成，充电站建设等业务领域，致力于推动清洁能源的普及与应用。</p>
+                    <p>公司拥有一支经验丰富、技术精湛的专业团队，具备从项目规划、设计、施工到运维的全流程服务能力，确保每个项目都能高效、稳定运行。</p>
                 </div>
+                
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="关于我们">
+                    <img src="https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2076&q=80" alt="公司办公环境">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 业务范围 -->
-    <section id="services" class="services">
+    <!-- 业务领域 -->
+    <section class="services-section" id="services">
         <div class="container">
             <div class="section-title">
-                <h2>业务范围</h2>
-                <p>提供全方位的新能源解决方案</p>
+                <h2>业务领域</h2>
             </div>
+            
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="分布式光伏项目">
+                    <div class="service-icon">
+                        <i class="fas fa-solar-panel"></i>
                     </div>
-                    <div class="service-content">
-                        <h3>分布式光伏项目</h3>
-                        <p>为企业、工厂、商业建筑等提供分布式光伏发电系统设计、安装和运维服务，帮助客户降低用电成本，实现绿色能源转型。</p>
-                    </div>
+                    <h3>光伏项目</h3>
+                    <p>提供光伏电站的投资、设计、建设与运维一体化服务，涵盖分布式光伏和集中式光伏电站。</p>
                 </div>
+                
                 <div class="service-card">
-                    <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1622732526750-4d043a8ee4c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="充电站业务">
+                    <div class="service-icon">
+                        <i class="fas fa-wind"></i>
                     </div>
-                    <div class="service-content">
-                        <h3>充电站业务</h3>
-                        <p>提供电动汽车充电站规划、建设和运营服务，包括快充站、慢充站和光储充一体化解决方案，助力绿色交通发展。</p>
-                    </div>
+                    <h3>风电运维</h3>
+                    <p>专业的风电场运维服务，包括定期维护、故障诊断、性能优化和远程监控等。</p>
                 </div>
+                
                 <div class="service-card">
-                    <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1626721105780-67ce0951644c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="储能业务">
+                    <div class="service-icon">
+                        <i class="fas fa-car-battery"></i>
                     </div>
-                    <div class="service-content">
-                        <h3>储能业务</h3>
-                        <p>结合光伏发电与储能技术，提供智能能源管理系统，提高能源利用效率，实现能源的稳定供应和优化配置。</p>
+                    <h3>储能系统</h3>
+                    <p>提供储能系统集成解决方案，包括电池储能、抽水蓄能和飞轮储能等技术应用。</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-charging-station"></i>
                     </div>
+                    <h3>充电站建设</h3>
+                    <p>设计建设电动汽车充电基础设施，提供快速充电、智能管理和运营维护服务。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 项目案例 -->
-    <section id="projects">
-        <div class="container">
-            <div class="section-title">
-                <h2>项目案例</h2>
-                <p>成功案例展示我们的专业能力</p>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="郑州工商业光伏项目">
-                    </div>
-                    <div class="project-content">
-                        <h3>郑州工商业光伏项目</h3>
-                        <p>装机容量：5.99MW</p>
-                        <p>年发电量：约650万度</p>
-                        <p>年减排二氧化碳：约5200吨</p>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="安阳安钢光伏项目">
-                    </div>
-                    <div class="project-content">
-                        <h3>安阳安钢光伏项目</h3>
-                        <p>装机容量：10MW</p>
-                        <p>年发电量：约1100万度</p>
-                        <p>为大型工业企业提供清洁能源</p>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="https://images.unsplash.com/photo-1548611635-b6e7827d7d4a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="商丘工商业光伏项目">
-                    </div>
-                    <div class="project-content">
-                        <h3>商丘工商业光伏项目</h3>
-                        <p>装机容量：3.59MW</p>
-                        <p>年发电量：约390万度</p>
-                        <p>实现建筑节能，提升绿色形象</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 公司优势 -->
-    <section id="advantages" class="advantages">
-        <div class="container">
-            <div class="section-title">
-                <h2>公司优势</h2>
-                <p>为什么选择我们</p>
-            </div>
-            <div class="advantages-grid">
-                <div class="advantage-item">
-                    <div class="advantage-icon">⚡</div>
-                    <h3>专业技术团队</h3>
-                    <p>拥有经验丰富的工程师和技术人员，确保项目设计合理、施工规范。</p>
-                </div>
-                <div class="advantage-item">
-                    <div class="advantage-icon">🔧</div>
-                    <h3>完善服务体系</h3>
-                    <p>从咨询、设计到施工、运维，提供一站式服务，确保客户无忧。</p>
-                </div>
-                <div class="advantage-item">
-                    <div class="advantage-icon">💰</div>
-                    <h3>成本效益优势</h3>
-                    <p>通过规模化采购和精细化管理，为客户提供高性价比的解决方案。</p>
-                </div>
-                <div class="advantage-item">
-                    <div class="advantage-icon">🌱</div>
-                    <h3>绿色环保理念</h3>
-                    <p>致力于推广清洁能源，为客户创造经济价值的同时实现环保效益。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 联系我们 -->
-    <section id="contact">
+    <!-- 联系信息 -->
+    <section class="contact-section" id="contact">
         <div class="container">
             <div class="section-title">
                 <h2>联系我们</h2>
-                <p>期待与您合作，共创绿色未来</p>
             </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">📍</div>
-                        <div>
-                            <h3>公司地址</h3>
-                            <p>河南省郑州市金水路8号</p>
-                        </div>
+            
+            <div class="contact-info">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">📞</div>
-                        <div>
-                            <h3>联系电话</h3>
-                            <p>13837288568</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">✉️</div>
-                        <div>
-                            <h3>电子邮箱</h3>
-                            <p>info@yunchange.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">🕒</div>
-                        <div>
-                            <h3>工作时间</h3>
-                            <p>周一至周五 8:30-17:30</p>
-                        </div>
-                    </div>
+                    <h3>公司地址</h3>
+                    <p>河南省郑州市金水区金水路8号</p>
                 </div>
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="您的姓名" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" class="form-control" placeholder="联系电话" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" placeholder="电子邮箱" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control" placeholder="留言内容" required></textarea>
-                        </div>
-                        <button type="submit" class="btn">提交留言</button>
-                    </form>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>联系电话</h3>
+                    <p>0371-55159279</p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>电子邮箱</h3>
+                    <p>business@yunchang-tech.com</p>
                 </div>
             </div>
         </div>
@@ -785,57 +606,61 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-column">
-                    <h3>河南昀昶建设科技</h3>
-                    <p>专业光伏新能源解决方案提供商，致力于绿色能源发展，为客户提供全方位的光伏发电、充电站和储能服务。</p>
+                <div class="footer-about">
+                    <div class="footer-logo">河南<span>昀昶</span>建设科技</div>
+                    <p>公司成立于2007年，致力于新能源光伏、风电、储能及充电站等项目的投资、建设与运维，为客户提供全方位清洁能源解决方案。</p>
                 </div>
-                <div class="footer-column">
-                    <h3>快速链接</h3>
-                    <ul class="footer-links">
+                
+                <div class="footer-links">
+                    <h4>快速链接</h4>
+                    <ul>
                         <li><a href="#home">首页</a></li>
                         <li><a href="#about">关于我们</a></li>
-                        <li><a href="#services">业务范围</a></li>
-                        <li><a href="#projects">项目案例</a></li>
-                        <li><a href="#advantages">公司优势</a></li>
+                        <li><a href="#services">业务领域</a></li>
                         <li><a href="#contact">联系我们</a></li>
                     </ul>
                 </div>
-                <div class="footer-column">
-                    <h3>联系我们</h3>
-                    <ul class="footer-links">
-                        <li>📍 河南省郑州市金水路8号</li>
-                        <li>📞 13837288568</li>
-                        <li>✉️ info@yunchange.com</li>
-                    </ul>
+                
+                <div class="footer-contact">
+                    <h4>联系信息</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 河南省郑州市金水区金水路8号</p>
+                    <p><i class="fas fa-phone"></i> 0371-55159279</p>
+                    <p><i class="fas fa-envelope"></i> business@yunchang-tech.com</p>
                 </div>
             </div>
+            
             <div class="copyright">
-                <p>&copy; 2023 河南昀昶建设科技有限公司 版权所有</p>
+                <p>&copy; 2007-2023 河南昀昶建设科技有限公司 版权所有</p>
             </div>
         </div>
     </footer>
 
-    <!-- 返回顶部按钮 -->
-    <div class="back-to-top">↑</div>
-
     <script>
         // 移动端菜单切换
-        document.querySelector('.mobile-menu').addEventListener('click', function() {
-            document.querySelector('.nav-links').classList.toggle('active');
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('navMenu').classList.toggle('active');
+            this.innerHTML = document.getElementById('navMenu').classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
         });
         
         // 平滑滚动
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
                     behavior: 'smooth'
                 });
                 
                 // 移动端点击后关闭菜单
                 if (window.innerWidth <= 768) {
-                    document.querySelector('.nav-links').classList.remove('active');
+                    document.getElementById('navMenu').classList.remove('active');
+                    document.getElementById('mobileMenuBtn').innerHTML = '<i class="fas fa-bars"></i>';
                 }
             });
         });
@@ -843,41 +668,13 @@
         // 导航栏滚动效果
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.style.padding = '10px 0';
-                header.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.1)';
+            if (window.scrollY > 50) {
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
             } else {
-                header.style.padding = '0';
-                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = '0 2px 15px rgba(0, 0, 0, 0.1)';
             }
-            
-            // 返回顶部按钮显示/隐藏
-            const backToTop = document.querySelector('.back-to-top');
-            if (window.scrollY > 300) {
-                backToTop.classList.add('active');
-            } else {
-                backToTop.classList.remove('active');
-            }
-        });
-        
-        // 返回顶部功能
-        document.querySelector('.back-to-top').addEventListener('click', function() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-        
-        // 表单提交处理
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('感谢您的留言，我们会尽快与您联系！');
-            this.reset();
-        });
-        
-        // 页面加载动画
-        window.addEventListener('load', function() {
-            document.body.classList.add('loaded');
         });
     </script>
 </body>
